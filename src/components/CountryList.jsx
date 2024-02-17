@@ -11,16 +11,18 @@ function CountryList({ cities, isLoading }) {
       <Message message="Add you first city by clicking a city on the map" />
     );
 
-  const countries = cities.filter((city) => city.country);
+  // Extract unique countries
+  const uniqueCountries = [...new Set(cities.map((city) => city.country))];
 
-  console.log(countries);
+  console.log(uniqueCountries);
 
   return (
-    <ul className={styles.countryList}>
+    <div></div>
+    /*  <ul className={styles.countryList}>
       {countries.map((country) => (
         <CountryItem key={country.id} country={country} />
       ))}
-    </ul>
+    </ul> */
   );
 }
 
