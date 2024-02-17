@@ -11,7 +11,9 @@ function CountryList({ cities, isLoading }) {
       <Message message="Add you first city by clicking a city on the map" />
     );
 
-  const countries = [];
+  const countries = cities.filter((city) => city.country);
+
+  console.log(countries);
 
   return (
     <ul className={styles.countryList}>
