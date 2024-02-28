@@ -11,10 +11,14 @@ function CityItem({ city }) {
     }).format(new Date(date));
 
   console.log(city);
-  const { cityName, date, emoji, id } = city;
+  const { cityName, date, emoji, id, position } = city;
+
   return (
     <li>
-      <Link className={styles.cityItem} to={`${id}`}>
+      <Link
+        className={styles.cityItem}
+        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
+      >
         {" "}
         {/* add id to the end of current url app/cities */}
         <span className={styles.emoji}>{emoji}</span>
