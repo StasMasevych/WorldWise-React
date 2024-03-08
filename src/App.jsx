@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Homepage from "./pages/Homepage";
@@ -16,7 +16,7 @@ const BASE_URL = "http://localhost:8000";
 
 function App() {
   const [cities, setCities] = useState([]);
-  console.log(cities);
+  /*   console.log(cities); */
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(function () {
@@ -40,10 +40,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/app" element={<AppLayout />}>
-          <Route
-            index
-            element={<CityList cities={cities} isLoading={isLoading} />}
-          />
+          <Route index element={<Navigate replace to="cities" />} />
           <Route
             path="cities"
             element={<CityList cities={cities} isLoading={isLoading} />}
