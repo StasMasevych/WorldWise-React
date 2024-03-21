@@ -2,6 +2,7 @@ import { useParams, useSearchParams } from "react-router-dom";
 import styles from "./City.module.css";
 import { useEffect, useState } from "react";
 import { useCities } from "../context/CitiesContext";
+import Spinner from "./Spinner";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -14,27 +15,11 @@ const formatDate = (date) =>
 function City() {
   const { id } = useParams();
 
-  const { setIsLoading } = useCities();
+  const { currentCity, getCity, isLoading } = useCities();
 
-  const [currentCity, setCurrentCity] = useState("");
-
-  const BASE_URL = "http://localhost:8000";
-
-  useEffect(function () {
-    setIsLoading(true);
-    async function fetchCities() {
-      try {
-        const res = await fetch(`${BASE_URL}/cities/${id}`);
-        const data = await res.json();
-        setCurrentCity(data);
-      } catch {
-        alert("There is an error loading data ...");
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchCities();
-  }, []);
+  useEffect(() => {
+    getCity(id);
+  }, [id]);
 
   /* const [searchParams, setSearchParams] = useSearchParams();
 
@@ -43,16 +28,9 @@ function City() {
 
   const { cityName, emoji, date, notes } = currentCity;
 
-  return (
-    <div>
-      <h1>
-        City {id} {cityName}
-      </h1>
-      <h2>Emoji {emoji}</h2>
-    </div>
-  );
+  if (isLoading) return <Spinner />;
 
-  /* return (
+  return (
     <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
@@ -86,7 +64,7 @@ function City() {
 
       <div></div>
     </div>
-  ); */
+  );
 }
 
 export default City;

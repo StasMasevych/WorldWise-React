@@ -6,6 +6,7 @@ function CitiesProvider({ children }) {
   const BASE_URL = "http://localhost:8000";
 
   const [cities, setCities] = useState([]);
+  const [currentCity, setCurrentCity] = useState({});
   /*   console.log(cities); */
   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,14 +24,31 @@ function CitiesProvider({ children }) {
       }
     }
     fetchCities();
+    console.log("fetchCities call");
   }, []);
+
+  async function getCity(id) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities/${id}`);
+      const data = await res.json();
+      setCurrentCity(data);
+    } catch {
+      alert("There is an error loading data ...");
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   return (
     <CitiesContext.Provider
       value={{
         cities,
+        getCity,
         isLoading,
         setIsLoading,
+        currentCity,
+        setCurrentCity,
       }}
     >
       {children}
