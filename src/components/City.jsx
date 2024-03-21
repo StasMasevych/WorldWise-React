@@ -1,5 +1,7 @@
 import { useParams, useSearchParams } from "react-router-dom";
 import styles from "./City.module.css";
+import { useEffect, useState } from "react";
+import { useCities } from "../context/CitiesContext";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -11,27 +13,42 @@ const formatDate = (date) =>
 
 function City() {
   const { id } = useParams();
-  const [searchParams, setSearchParams] = useSearchParams();
+
+  const { setIsLoading } = useCities();
+
+  const [currentCity, setCurrentCity] = useState("");
+
+  const BASE_URL = "http://localhost:8000";
+
+  useEffect(function () {
+    setIsLoading(true);
+    async function fetchCities() {
+      try {
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
+        setCurrentCity(data);
+      } catch {
+        alert("There is an error loading data ...");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchCities();
+  }, []);
+
+  /* const [searchParams, setSearchParams] = useSearchParams();
 
   const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
-
-  // TEMP DATA
-  const currentCity = {
-    cityName: "Lisbon",
-    emoji: "🇵🇹",
-    date: "2027-10-31T15:59:59.138Z",
-    notes: "My favorite city so far!",
-  };
+  const lng = searchParams.get("lng"); */
 
   const { cityName, emoji, date, notes } = currentCity;
 
   return (
     <div>
-      <h1>City {id}</h1>
-      <h2>
-        Position: {lat}, {lng}
-      </h2>
+      <h1>
+        City {id} {cityName}
+      </h1>
+      <h2>Emoji {emoji}</h2>
     </div>
   );
 

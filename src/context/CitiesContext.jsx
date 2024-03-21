@@ -30,6 +30,7 @@ function CitiesProvider({ children }) {
       value={{
         cities,
         isLoading,
+        setIsLoading,
       }}
     >
       {children}
