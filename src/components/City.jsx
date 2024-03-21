@@ -3,7 +3,7 @@ import styles from "./City.module.css";
 import { useEffect, useState } from "react";
 import { useCities } from "../context/CitiesContext";
 import Spinner from "./Spinner";
-import Button from "./Button";
+
 import BackButton from "./BackButton";
 
 const formatDate = (date) =>
@@ -17,7 +17,6 @@ const formatDate = (date) =>
 function City() {
   const { id } = useParams();
   const { currentCity, getCity, isLoading } = useCities();
-  const navigate = useNavigate();
 
   useEffect(() => {
     getCity(id);
