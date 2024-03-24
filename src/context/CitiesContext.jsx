@@ -7,7 +7,7 @@ function CitiesProvider({ children }) {
 
   const [cities, setCities] = useState([]);
   const [currentCity, setCurrentCity] = useState({});
-  /*   console.log(cities); */
+  console.log(currentCity);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(function () {
