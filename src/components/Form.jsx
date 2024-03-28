@@ -30,7 +30,7 @@ function Form() {
   const [notes, setNotes] = useState("");
 
   const [lat, lng] = useURLPosition();
-  const { cities, setCities /* addNewCity  */ } = useCities();
+  const { cities, setCities, addNewCity } = useCities();
   const navigate = useNavigate();
 
   const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
@@ -39,7 +39,7 @@ function Form() {
     e.preventDefault();
     console.log(e);
 
-    const visitedCity = {
+    const newVisitedCity = {
       cityName: cityName,
       date: date.toString(),
       position: {
@@ -48,12 +48,14 @@ function Form() {
       },
       emoji: emoji,
       notes: notes,
+      id: crypto.randomUUID(),
     };
 
-    const updatedCities = [...cities, visitedCity];
+    const updatedCities = [...cities, newVisitedCity];
 
     /* console.log(updatedCities); */
     setCities(updatedCities);
+    /* addNewCity(newVisitedCity); */
     navigate("/app/cities");
   }
 

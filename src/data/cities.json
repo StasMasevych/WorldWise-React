@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": "73930385"
+      "id": 73930385
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": "17806751"
+      "id": 17806751
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,7 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": "98443197"
+      "id": 98443197
     },
     {
       "cityName": "Kyiv",
@@ -46,7 +46,7 @@
         "lat": 50.4501,
         "lng": 30.5234
       },
-      "id": "135792468"
+      "id": 135792468
     },
     {
       "cityName": "York",
@@ -58,7 +58,7 @@
         "lat": 53.9591,
         "lng": -1.0812
       },
-      "id": "246813579"
+      "id": 246813579
     },
     {
       "cityName": "Vienna",
@@ -70,7 +70,7 @@
         "lat": 48.2082,
         "lng": 16.3738
       },
-      "id": "369258147"
+      "id": 369258147
     },
     {
       "cityName": "Istanbul",
@@ -82,7 +82,7 @@
         "lat": 41.0082,
         "lng": 28.9784
       },
-      "id": "951753"
+      "id": 951753
     },
     {
       "cityName": "Oslo",
@@ -94,7 +94,7 @@
         "lat": 59.9139,
         "lng": 10.7522
       },
-      "id": "852036"
+      "id": 852036
     },
     {
       "cityName": "Rome",
@@ -106,131 +106,7 @@
         "lat": 41.9028,
         "lng": 12.4964
       },
-      "id": "753951"
-    },
-    {
-      "id": "a0cd",
-      "name": "New City"
-    },
-    {
-      "id": "8530",
-      "name": "New City"
-    },
-    {
-      "id": "88f7",
-      "name": "New City"
-    },
-    {
-      "id": "6907",
-      "name": "New City"
-    },
-    {
-      "id": "8569",
-      "name": "New City"
-    },
-    {
-      "id": "3706",
-      "name": "New City"
-    },
-    {
-      "id": "05ea",
-      "name": "New City"
-    },
-    {
-      "id": "3bd0",
-      "name": "New City"
-    },
-    {
-      "id": "94a4",
-      "name": "New City"
-    },
-    {
-      "id": "c7bd",
-      "name": "New City"
-    },
-    {
-      "id": "121f",
-      "name": "New City"
-    },
-    {
-      "id": "713c",
-      "name": "New City"
-    },
-    {
-      "id": "05c1",
-      "name": "New City"
-    },
-    {
-      "id": "683e",
-      "name": "New City"
-    },
-    {
-      "id": "2fb1",
-      "name": "New City"
-    },
-    {
-      "id": "2626",
-      "name": "New City"
-    },
-    {
-      "id": "0416",
-      "name": "New City"
-    },
-    {
-      "id": "b78a",
-      "name": "New City"
-    },
-    {
-      "id": "c154",
-      "name": "New City"
-    },
-    {
-      "id": "06f7",
-      "name": "New City"
-    },
-    {
-      "id": "a36a",
-      "name": "New City"
-    },
-    {
-      "id": "0fd9",
-      "name": "New City"
-    },
-    {
-      "id": "dbf0",
-      "name": "New City"
-    },
-    {
-      "id": "2e1a",
-      "name": "New City"
-    },
-    {
-      "id": "47c3",
-      "name": "New City"
-    },
-    {
-      "id": "efb6",
-      "name": "New City"
-    },
-    {
-      "id": "ec2c",
-      "name": "New City"
-    },
-    {
-      "id": "5ced",
-      "name": "New City"
-    },
-    {
-      "id": "fd43",
-      "name": "New City"
-    },
-    {
-      "id": "5ec6",
-      "name": "New City"
-    },
-    {
-      "id": "ffb4",
-      "name": "New City"
+      "id": 753951
     }
   ]
 }

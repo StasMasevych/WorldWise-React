@@ -42,7 +42,7 @@ function CitiesProvider({ children }) {
 
   // Assuming you have a function to handle the post request in your component
 
-  /* async function addNewCity(newCityData) {
+  async function addNewCity(newCityData) {
     try {
       const response = await fetch(`${BASE_URL}/cities`, {
         method: "POST",
@@ -63,7 +63,7 @@ function CitiesProvider({ children }) {
       console.error("Error adding new city:", error);
       // Handle error, e.g., show error message to the user
     }
-  } */
+  }
 
   return (
     <CitiesContext.Provider
@@ -71,7 +71,7 @@ function CitiesProvider({ children }) {
         cities,
         setCities,
         getCity,
-        /*  addNewCity, */
+        addNewCity,
         isLoading,
         setIsLoading,
         currentCity,
