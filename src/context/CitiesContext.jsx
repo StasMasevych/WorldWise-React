@@ -7,6 +7,7 @@ function CitiesProvider({ children }) {
 
   const [cities, setCities] = useState([]);
   const [currentCity, setCurrentCity] = useState({});
+  console.log(cities);
   console.log(currentCity);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -67,6 +68,27 @@ function CitiesProvider({ children }) {
     }
   }
 
+  // Delete a city from json DB by delete request to server
+
+  async function deleteCity(id) {
+    try {
+      const response = await fetch(`${BASE_URL}/cities/${id}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        console.log("City deleted successfully");
+        // Perform any necessary actions after successful deletion
+      } else {
+        console.error("Failed to delete city");
+        // Handle error cases
+      }
+    } catch (error) {
+      console.error("Error deleting city:", error);
+      // Handle network errors
+    }
+  }
+
   return (
     <CitiesContext.Provider
       value={{
@@ -74,6 +96,7 @@ function CitiesProvider({ children }) {
         setCities,
         getCity,
         addNewCity,
+        deleteCity,
         isLoading,
         setIsLoading,
         currentCity,

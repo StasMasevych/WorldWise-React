@@ -11,28 +11,40 @@ function CityItem({ city }) {
       /*  weekday: "long", */
     }).format(new Date(date));
 
-  const { currentCity } = useCities();
+  const { cities, setCities, currentCity, deleteCity } = useCities();
 
   const { cityName, date, emoji, id, position } = city;
 
   const isActive = id === currentCity.id;
 
   return (
-    <li>
-      <Link
-        className={`${styles.cityItem} ${
-          isActive ? styles["cityItem--active"] : ""
-        }`}
-        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
-      >
-        {" "}
-        {/* add id to the end of current url app/cities */}
-        <span className={styles.emoji}>{emoji}</span>
-        <h3 className={styles.name}>{cityName}</h3>
-        <time className={styles.date}>{formatDate(date)}</time>
-        <button className={styles.deleteBtn}>&times;</button>
-      </Link>
-    </li>
+    <>
+      <li>
+        <Link
+          className={`${styles.cityItem} ${
+            isActive ? styles["cityItem--active"] : ""
+          }`}
+          to={`${id}?lat=${position.lat}&lng=${position.lng}`}
+        >
+          {" "}
+          {/* add id to the end of current url app/cities */}
+          <span className={styles.emoji}>{emoji}</span>
+          <h3 className={styles.name}>{cityName}</h3>
+          <time className={styles.date}>{formatDate(date)}</time>
+          <button
+            className={styles.deleteBtn}
+            onClick={(event) => {
+              event.preventDefault(); // Prevent default link behavior
+              const newArrayOfCities = cities.filter((city) => city.id !== id);
+              setCities(newArrayOfCities);
+              deleteCity(id);
+            }}
+          >
+            &times;
+          </button>
+        </Link>
+      </li>
+    </>
   );
 }
 
