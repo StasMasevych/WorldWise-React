@@ -15,8 +15,8 @@ function CityList() {
 
   return (
     <ul className={styles.cityList}>
-      {cities.map((city) => (
-        <CityItem key={city.cityName} city={city} />
+      {cities.map((city, index) => (
+        <CityItem key={index} city={city} />
       ))}
     </ul>
   );

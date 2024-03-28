@@ -40,11 +40,38 @@ function CitiesProvider({ children }) {
     }
   }
 
+  // Assuming you have a function to handle the post request in your component
+
+  /* async function addNewCity(newCityData) {
+    try {
+      const response = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newCityData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add new city");
+      }
+
+      const data = await response.json();
+      console.log("New city added:", data);
+      // Handle success, e.g., update state or trigger a refresh of city data
+    } catch (error) {
+      console.error("Error adding new city:", error);
+      // Handle error, e.g., show error message to the user
+    }
+  } */
+
   return (
     <CitiesContext.Provider
       value={{
         cities,
+        setCities,
         getCity,
+        /*  addNewCity, */
         isLoading,
         setIsLoading,
         currentCity,

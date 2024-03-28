@@ -8,6 +8,8 @@ import BackButton from "./BackButton";
 import { useURLPosition } from "../hooks/useURLPosition";
 import Message from "./Message";
 import Spinner from "./Spinner";
+import { useCities } from "../context/CitiesContext";
+import { useNavigate } from "react-router-dom";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -28,9 +30,32 @@ function Form() {
   const [notes, setNotes] = useState("");
 
   const [lat, lng] = useURLPosition();
-  console.log(lat, lng);
+  const { cities, setCities /* addNewCity  */ } = useCities();
+  const navigate = useNavigate();
 
   const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
+
+  function handleSubmitForm(e) {
+    e.preventDefault();
+    console.log(e);
+
+    const visitedCity = {
+      cityName: cityName,
+      date: date.toString(),
+      position: {
+        lat: lat,
+        lng: lng,
+      },
+      emoji: emoji,
+      notes: notes,
+    };
+
+    const updatedCities = [...cities, visitedCity];
+
+    /* console.log(updatedCities); */
+    setCities(updatedCities);
+    navigate("/app/cities");
+  }
 
   useEffect(() => {
     if (!lat && !lng) return;
@@ -57,12 +82,17 @@ function Form() {
     fetchCityData();
   }, [lat, lng]);
 
+  if (!lat && !lng)
+    return (
+      <Message message="Please, select the city on the map which you visited" />
+    );
+
   if (isLoadingGeolocation) return <Spinner />;
 
   if (geocodingError) return <Message message={geocodingError} />;
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmitForm}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
