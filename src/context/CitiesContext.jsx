@@ -27,6 +27,8 @@ function CitiesProvider({ children }) {
     console.log("fetchCities call");
   }, []);
 
+  // get city from json file DB by get request to server
+
   async function getCity(id) {
     try {
       setIsLoading(true);
@@ -40,7 +42,7 @@ function CitiesProvider({ children }) {
     }
   }
 
-  // Assuming you have a function to handle the post request in your component
+  // Post new city to json DB by post request to server
 
   async function addNewCity(newCityData) {
     try {

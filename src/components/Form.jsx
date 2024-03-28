@@ -55,7 +55,7 @@ function Form() {
 
     /* console.log(updatedCities); */
     setCities(updatedCities);
-    /* addNewCity(newVisitedCity); */
+    addNewCity(newVisitedCity);
     navigate("/app/cities");
   }
 
