@@ -107,6 +107,39 @@
         "lng": 12.4964
       },
       "id": "753951"
+    },
+    {
+      "id": "24e341e4-4ec9-4701-9ace-0a837894b267",
+      "cityName": "Innertkirchen",
+      "date": "Fri Mar 29 2024 15:54:17 GMT+0100 (Central European Standard Time)",
+      "position": {
+        "lat": "46.70973594407157",
+        "lng": "8.437500000000002"
+      },
+      "emoji": "🇨🇭",
+      "notes": "Nice"
+    },
+    {
+      "id": "9ef85093-e079-4b53-8f9d-171e76a2d269",
+      "cityName": "Belgrade",
+      "date": "Fri Mar 29 2024 17:40:22 GMT+0100 (Central European Standard Time)",
+      "position": {
+        "lat": "44.74673324024681",
+        "lng": "20.522460937500004"
+      },
+      "emoji": "🇷🇸",
+      "notes": "cool"
+    },
+    {
+      "id": "c8b862b3-cc3d-4b7d-a9dc-59abed5cc73c",
+      "cityName": "Vilnius",
+      "date": "Fri Mar 29 2024 17:41:56 GMT+0100 (Central European Standard Time)",
+      "position": {
+        "lat": "54.648412502316695",
+        "lng": "25.224609375000004"
+      },
+      "emoji": "🇱🇹",
+      "notes": ""
     }
   ]
 }

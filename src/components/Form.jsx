@@ -34,14 +34,17 @@ function Form() {
   console.log(startDate);
 
   const [lat, lng] = useURLPosition();
-  const { cities, setCities, addNewCity } = useCities();
+  const { cities, setCities, addNewCity, isLoading } = useCities();
+  console.log(isLoading);
   const navigate = useNavigate();
 
   const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
   function handleSubmitForm(e) {
     e.preventDefault();
-    console.log(e);
+    /* console.log(e); */
+
+    if (!cityName || !date) return;
 
     const newVisitedCity = {
       cityName: cityName,
@@ -55,10 +58,10 @@ function Form() {
       id: crypto.randomUUID(),
     };
 
-    const updatedCities = [...cities, newVisitedCity];
+    //const updatedCities = [...cities, newVisitedCity]; transfer inside function addNewCity
 
     /* console.log(updatedCities); */
-    setCities(updatedCities);
+    //setCities(updatedCities); transfer inside function addNewCity
     addNewCity(newVisitedCity);
     navigate("/app/cities");
   }
@@ -98,7 +101,10 @@ function Form() {
   if (geocodingError) return <Message message={geocodingError} />;
 
   return (
-    <form className={styles.form} onSubmit={handleSubmitForm}>
+    <form
+      className={`${styles.form} ${isLoading ? styles.loading : ""}`}
+      onSubmit={handleSubmitForm}
+    >
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input

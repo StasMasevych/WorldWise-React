@@ -47,7 +47,8 @@ function CitiesProvider({ children }) {
 
   async function addNewCity(newCityData) {
     try {
-      const response = await fetch(`${BASE_URL}/cities`, {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,16 +56,20 @@ function CitiesProvider({ children }) {
         body: JSON.stringify(newCityData),
       });
 
-      if (!response.ok) {
+      if (!res.ok) {
         throw new Error("Failed to add new city");
       }
 
-      const data = await response.json();
-      console.log("New city added:", data);
+      const newAddedCity = await res.json();
+      const updatedCities = [...cities, newAddedCity];
+      setCities(updatedCities);
+      console.log("New city added:", newAddedCity);
       // Handle success, e.g., update state or trigger a refresh of city data
     } catch (error) {
       console.error("Error adding new city:", error);
       // Handle error, e.g., show error message to the user
+    } finally {
+      setIsLoading(false);
     }
   }
 
