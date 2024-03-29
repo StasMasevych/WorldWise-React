@@ -10,6 +10,8 @@ import Message from "./Message";
 import Spinner from "./Spinner";
 import { useCities } from "../context/CitiesContext";
 import { useNavigate } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -23,11 +25,13 @@ function Form() {
   const [cityName, setCityName] = useState("");
   const [isLoadingGeolocation, setIsLoadingGeolocation] = useState(false);
   const [geocodingError, setGeocodingError] = useState("");
-  console.log(geocodingError);
+  /* console.log(geocodingError); */
   const [country, setCountry] = useState("");
   const [emoji, setEmoji] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
+  console.log(startDate);
 
   const [lat, lng] = useURLPosition();
   const { cities, setCities, addNewCity } = useCities();
@@ -107,11 +111,16 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input
+        <DatePicker
+          id="date"
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+        />
+        {/* <input
           id="date"
           onChange={(e) => setDate(e.target.value)}
           value={date}
-        />
+        /> */}
       </div>
 
       <div className={styles.row}>
