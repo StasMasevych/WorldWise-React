@@ -10,6 +10,7 @@ function CitiesProvider({ children }) {
   console.log(cities);
   console.log(currentCity);
   const [isLoading, setIsLoading] = useState(false);
+  console.log("isLoading", isLoading);
 
   useEffect(function () {
     setIsLoading(true);
@@ -77,6 +78,8 @@ function CitiesProvider({ children }) {
 
   async function deleteCity(id) {
     try {
+      setIsLoading(true);
+
       const response = await fetch(`${BASE_URL}/cities/${id}`, {
         method: "DELETE",
       });
@@ -91,6 +94,8 @@ function CitiesProvider({ children }) {
     } catch (error) {
       console.error("Error deleting city:", error);
       // Handle network errors
+    } finally {
+      setIsLoading(false);
     }
   }
 

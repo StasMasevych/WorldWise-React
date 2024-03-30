@@ -31,16 +31,16 @@ function Form() {
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
   const [startDate, setStartDate] = useState(new Date());
-  console.log(startDate);
+  /* console.log(startDate); */
 
   const [lat, lng] = useURLPosition();
   const { cities, setCities, addNewCity, isLoading } = useCities();
-  console.log(isLoading);
+
   const navigate = useNavigate();
 
   const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
-  function handleSubmitForm(e) {
+  async function handleSubmitForm(e) {
     e.preventDefault();
     /* console.log(e); */
 
@@ -62,7 +62,7 @@ function Form() {
 
     /* console.log(updatedCities); */
     //setCities(updatedCities); transfer inside function addNewCity
-    addNewCity(newVisitedCity);
+    await addNewCity(newVisitedCity);
     navigate("/app/cities");
   }
 

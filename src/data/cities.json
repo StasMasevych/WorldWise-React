@@ -73,30 +73,6 @@
       "id": "369258147"
     },
     {
-      "cityName": "Istanbul",
-      "country": "Turkey",
-      "emoji": "🇹🇷",
-      "date": "2027-09-20T18:30:00.000Z",
-      "notes": "Where east meets west.",
-      "position": {
-        "lat": 41.0082,
-        "lng": 28.9784
-      },
-      "id": "951753"
-    },
-    {
-      "cityName": "Oslo",
-      "country": "Norway",
-      "emoji": "🇳🇴",
-      "date": "2027-06-14T12:00:00.000Z",
-      "notes": "Scenic and serene.",
-      "position": {
-        "lat": 59.9139,
-        "lng": 10.7522
-      },
-      "id": "852036"
-    },
-    {
       "cityName": "Rome",
       "country": "Italy",
       "emoji": "🇮🇹",
@@ -120,25 +96,47 @@
       "notes": "Nice"
     },
     {
-      "id": "9ef85093-e079-4b53-8f9d-171e76a2d269",
-      "cityName": "Belgrade",
-      "date": "Fri Mar 29 2024 17:40:22 GMT+0100 (Central European Standard Time)",
+      "id": "f3b76d5c-e0c2-4fcd-a925-831c59d863e1",
+      "cityName": "Saint-Victeur",
+      "date": "Sat Mar 30 2024 09:44:54 GMT+0100 (Central European Standard Time)",
       "position": {
-        "lat": "44.74673324024681",
-        "lng": "20.522460937500004"
+        "lat": "48.31242790407178",
+        "lng": "0.0439453125"
       },
-      "emoji": "🇷🇸",
-      "notes": "cool"
+      "emoji": "🇫🇷",
+      "notes": ""
     },
     {
-      "id": "c8b862b3-cc3d-4b7d-a9dc-59abed5cc73c",
-      "cityName": "Vilnius",
-      "date": "Fri Mar 29 2024 17:41:56 GMT+0100 (Central European Standard Time)",
+      "id": "421fd8f1-27a1-41bb-a063-824153119676",
+      "cityName": "Trans-sur-Erdre",
+      "date": "Sat Mar 30 2024 09:45:21 GMT+0100 (Central European Standard Time)",
       "position": {
-        "lat": "54.648412502316695",
-        "lng": "25.224609375000004"
+        "lat": "47.45780853075031",
+        "lng": "-1.3623046875000002"
       },
-      "emoji": "🇱🇹",
+      "emoji": "🇫🇷",
+      "notes": ""
+    },
+    {
+      "id": "c1268cd3-e244-4068-8513-be824813ac07",
+      "cityName": "Saint-Clair",
+      "date": "Sat Mar 30 2024 09:48:02 GMT+0100 (Central European Standard Time)",
+      "position": {
+        "lat": "46.89023157359399",
+        "lng": "0.0439453125"
+      },
+      "emoji": "🇫🇷",
+      "notes": "some"
+    },
+    {
+      "id": "0c3f91f0-3ccf-414d-ac89-0d58ca67ed92",
+      "cityName": "St Keyne",
+      "date": "Sat Mar 30 2024 09:48:31 GMT+0100 (Central European Standard Time)",
+      "position": {
+        "lat": "50.54136296522163",
+        "lng": "-4.394531250000001"
+      },
+      "emoji": "🇬🇧",
       "notes": ""
     }
   ]
