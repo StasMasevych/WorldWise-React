@@ -122,11 +122,6 @@ function Form() {
           selected={startDate}
           onChange={(date) => setStartDate(date)}
         />
-        {/* <input
-          id="date"
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
-        /> */}
       </div>
 
       <div className={styles.row}>

@@ -35,8 +35,8 @@ function CityItem({ city }) {
             className={styles.deleteBtn}
             onClick={(event) => {
               event.preventDefault(); // Prevent default link behavior
-              const newArrayOfCities = cities.filter((city) => city.id !== id);
-              setCities(newArrayOfCities);
+              //const newArrayOfCities = cities.filter((city) => city.id !== id);transfer inside function deleteCity
+              //setCities(newArrayOfCities);transfer inside function deleteCity
               deleteCity(id);
             }}
           >

@@ -80,17 +80,18 @@ function CitiesProvider({ children }) {
     try {
       setIsLoading(true);
 
-      const response = await fetch(`${BASE_URL}/cities/${id}`, {
+      const res = await fetch(`${BASE_URL}/cities/${id}`, {
         method: "DELETE",
       });
 
-      if (response.ok) {
-        console.log("City deleted successfully");
-        // Perform any necessary actions after successful deletion
-      } else {
-        console.error("Failed to delete city");
-        // Handle error cases
+      if (!res.ok) {
+        throw new Error("Failed to delete new city");
       }
+      //changing UI state with deleting
+      const newArrayOfCities = cities.filter((city) => city.id !== id);
+      setCities(newArrayOfCities);
+
+      console.log("City deleted successfully");
     } catch (error) {
       console.error("Error deleting city:", error);
       // Handle network errors
