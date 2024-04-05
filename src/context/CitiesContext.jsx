@@ -52,7 +52,7 @@ function reducer(state, action) {
     return {
       ...state,
       isLoading: false,
-      cities: action.payload,
+      cities: state.cities.filter((city) => city.id !== action.payload),
     };
   }
 
@@ -159,9 +159,8 @@ function CitiesProvider({ children }) {
       if (!res.ok) {
         throw new Error("Failed to delete new city");
       }
-      //changing UI state with deleting
-      const newArrayOfCities = cities.filter((city) => city.id !== id);
-      dispatch({ type: "city/deleted", payload: newArrayOfCities });
+
+      dispatch({ type: "city/deleted", payload: id });
 
       console.log("City deleted successfully");
     } catch {
