@@ -11,7 +11,7 @@ function CityItem({ city }) {
       /*  weekday: "long", */
     }).format(new Date(date));
 
-  const { cities, setCities, currentCity, deleteCity } = useCities();
+  const { currentCity, deleteCity } = useCities();
 
   const { cityName, date, emoji, id, position } = city;
 

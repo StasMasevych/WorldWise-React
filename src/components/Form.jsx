@@ -34,7 +34,7 @@ function Form() {
   /* console.log(startDate); */
 
   const [lat, lng] = useURLPosition();
-  const { cities, setCities, addNewCity, isLoading } = useCities();
+  const { addNewCity, isLoading } = useCities();
 
   const navigate = useNavigate();
 
