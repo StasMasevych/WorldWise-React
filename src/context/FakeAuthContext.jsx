@@ -43,18 +43,17 @@ function AuthProvider({ children }) {
   );
 
   function login(email, password) {
+    console.log("login called");
     if (email === FAKE_USER.email && password === FAKE_USER.password) {
       dispatch({ type: "login", payload: FAKE_USER });
     }
-
-    throw new Error("The user is not existed");
   }
 
   function logout() {
     dispatch({ type: "logout" });
   }
   return (
-    <AuthProvider.Provider
+    <AuthContext.Provider
       value={{
         user,
         isAuthenticated,
@@ -64,7 +63,7 @@ function AuthProvider({ children }) {
       }}
     >
       {children}
-    </AuthProvider.Provider>
+    </AuthContext.Provider>
   );
 }
 
