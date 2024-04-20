@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useReducer } from "react";
 const BASE_URL = "http://localhost:8000";
 
 const CitiesContext = createContext();
+console.log("CitiesContext", CitiesContext);
 
 const initialState = {
   cities: [],
