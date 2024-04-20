@@ -85,15 +85,26 @@
       "id": "753951"
     },
     {
-      "id": "24e341e4-4ec9-4701-9ace-0a837894b267",
-      "cityName": "Innertkirchen",
-      "date": "Fri Mar 29 2024 15:54:17 GMT+0100 (Central European Standard Time)",
+      "id": "2cbb946a-bbea-4f57-a607-39af7fc168b0",
+      "cityName": "Martin de la Jara",
+      "date": "Sat Apr 20 2024 11:13:48 GMT+0200 (Central European Summer Time)",
       "position": {
-        "lat": "46.70973594407157",
-        "lng": "8.437500000000002"
+        "lat": "37.125286284966805",
+        "lng": "-4.921875000000001"
       },
-      "emoji": "🇨🇭",
-      "notes": "Nice"
+      "emoji": "🇪🇸",
+      "notes": ""
+    },
+    {
+      "id": "92888b78-8a30-4213-832b-e91084ff97b6",
+      "cityName": "Vezins-de-Levezou",
+      "date": "Sat Apr 20 2024 11:19:17 GMT+0200 (Central European Summer Time)",
+      "position": {
+        "lat": "44.213709909702054",
+        "lng": "2.9003906250000004"
+      },
+      "emoji": "🇫🇷",
+      "notes": ""
     }
   ]
 }

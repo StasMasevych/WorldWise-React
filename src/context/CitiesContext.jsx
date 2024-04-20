@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useState,
-} from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -44,6 +38,7 @@ function reducer(state, action) {
     return {
       ...state,
       isLoading: false,
+      currentCity: action.payload,
       cities: [...state.cities, action.payload],
     };
   }
@@ -53,6 +48,7 @@ function reducer(state, action) {
       ...state,
       isLoading: false,
       cities: state.cities.filter((city) => city.id !== action.payload),
+      currentCity: {},
     };
   }
 
@@ -68,7 +64,7 @@ function reducer(state, action) {
 }
 
 function CitiesProvider({ children }) {
-  const [{ cities, isLoading, currentCity }, dispatch] = useReducer(
+  const [{ cities, isLoading, currentCity, error }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -101,6 +97,10 @@ function CitiesProvider({ children }) {
   // get city from json file DB by get request to server
 
   async function getCity(id) {
+    // if we already has current city and open it again, no need to call again getCity function
+
+    if (Number(id) === currentCity.id) return;
+
     try {
       dispatch({ type: "loading" });
       const res = await fetch(`${BASE_URL}/cities/${id}`);
@@ -180,6 +180,7 @@ function CitiesProvider({ children }) {
         deleteCity,
         isLoading,
         currentCity,
+        error,
       }}
     >
       {children}
