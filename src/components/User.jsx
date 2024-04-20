@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/FakeAuthContext";
 import styles from "./User.module.css";
 
 function User() {
   const { user, dispatch } = useAuth();
+  const navigate = useNavigate();
 
   function handleClick() {
     dispatch({ type: "logout" });
+    navigate("/");
   }
 
   return (
