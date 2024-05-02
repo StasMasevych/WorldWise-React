@@ -3,6 +3,7 @@ import styles from "./Login.module.css";
 import PageNav from "../components/PageNav";
 import { useAuth } from "../context/FakeAuthContext";
 import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 export default function Login() {
   // PRE-FILL FOR DEV PURPOSES
@@ -14,14 +15,15 @@ export default function Login() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    login(email, password);
+
+    if (email && password) login(email, password);
   }
 
   useEffect(() => {
     if (isAuthenticated === true) {
-      navigate("/app");
+      navigate("/app", { replace: true });
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, navigate]);
 
   return (
     <main className={styles.login}>
@@ -48,7 +50,7 @@ export default function Login() {
         </div>
 
         <div>
-          <button>Login</button>
+          <Button type="primary">Login</Button>
         </div>
       </form>
     </main>
