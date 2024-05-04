@@ -4,7 +4,7 @@
       "cityName": "Lisbon",
       "country": "Portugal",
       "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
+      "date": "2015-10-31T15:59:59.138Z",
       "notes": "My favorite city so far!",
       "position": {
         "lat": 38.727881642324164,
@@ -16,7 +16,7 @@
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2019-07-15T08:22:53.976Z",
       "notes": "Not bad",
       "position": {
         "lat": 40.46635901755316,
@@ -28,7 +28,7 @@
       "cityName": "Berlin",
       "country": "Germany",
       "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
+      "date": "2022-02-12T09:24:11.863Z",
       "notes": "Amazing 😃",
       "position": {
         "lat": 52.53586782505711,
@@ -40,7 +40,7 @@
       "cityName": "Kyiv",
       "country": "Ukraine",
       "emoji": "🇺🇦",
-      "date": "2027-08-28T14:37:21.572Z",
+      "date": "2021-08-28T14:37:21.572Z",
       "notes": "Beautiful city with rich history.",
       "position": {
         "lat": 50.4501,
@@ -52,7 +52,7 @@
       "cityName": "York",
       "country": "UK",
       "emoji": "🇬🇧",
-      "date": "2027-04-19T11:45:33.278Z",
+      "date": "2020-04-19T11:45:33.278Z",
       "notes": "Charming medieval city.",
       "position": {
         "lat": 53.9591,
@@ -64,7 +64,7 @@
       "cityName": "Vienna",
       "country": "Austria",
       "emoji": "🇦🇹",
-      "date": "2027-12-05T20:10:45.934Z",
+      "date": "2023-12-05T20:10:45.934Z",
       "notes": "The city of music.",
       "position": {
         "lat": 48.2082,
@@ -76,7 +76,7 @@
       "cityName": "Rome",
       "country": "Italy",
       "emoji": "🇮🇹",
-      "date": "2027-03-07T09:45:00.000Z",
+      "date": "2018-03-07T09:45:00.000Z",
       "notes": "Eternal city.",
       "position": {
         "lat": 41.9028,
@@ -105,6 +105,17 @@
       },
       "emoji": "🇫🇷",
       "notes": ""
+    },
+    {
+      "id": "0eaf21f1-1b84-4709-b96d-c29a69354511",
+      "cityName": "San Miguel de Cinca",
+      "date": "Sat May 04 2024 15:18:09 GMT+0200 (Central European Summer Time)",
+      "position": {
+        "lat": "41.80407814427237",
+        "lng": "0.087890625"
+      },
+      "emoji": "🇪🇸",
+      "notes": "test"
     }
   ]
 }
