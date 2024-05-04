@@ -1,6 +1,6 @@
 # Worldwise - Track you adventures
 
-### Hosting (Vercel) - https://worldwise-jonas.netlify.app
+### Hosting (Vercel) - https://world-wise-react-brown.vercel.app
 
 ### Main tech stack
 
