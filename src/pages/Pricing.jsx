@@ -2,6 +2,8 @@
 import PageNav from "../components/PageNav";
 import styles from "./Product.module.css";
 
+import image from "../assets/img-2.jpg";
+
 export default function Product() {
   return (
     <main className={styles.product}>
@@ -19,10 +21,7 @@ export default function Product() {
             voluptatem iste.
           </p>
         </div>
-        <img
-          src="/src/assets/img-2.jpg"
-          alt="overview of a large city with skyscrapers"
-        />
+        <img src={image} alt="overview of a large city with skyscrapers" />
       </section>
     </main>
   );
