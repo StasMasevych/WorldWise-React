@@ -1,8 +1,16 @@
-# React + Vite
+# Worldwise - Track you adventures
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Hosting (Vercel) - worldwise-track-your-adventures-32x4kzvu8.vercel.app
 
-Currently, two official plugins are available:
+### Main tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- React-Leaflet
+- React-Datepicker
+- Leaflet
+- JS
+- CSS
+
+<img width="1232" alt="Screenshot 2024-05-04 at 15 21 48" src="https://github.com/StasMasevych/WorldWise-React/assets/109438310/4dfdb237-ba3e-476b-b6a5-223fed5394fc">
+
+
