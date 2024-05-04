@@ -1,8 +1,13 @@
-# React + Vite
+# Worldwise - Track you adventures
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Main tech stack
 
-Currently, two official plugins are available:
+- React
+- React-Leaflet
+- React-Datepicker
+- Leaflet
+- JS
+- CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1246" alt="Screenshot 2024-05-04 at 15 11 29" src="https://github.com/StasMasevych/WorldWise-React/assets/109438310/28529370-7590-4e29-a3dd-6ec27204cb50">
+
